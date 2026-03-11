@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>Your Cart</h2>
+
+{% if products %}
+
+<table class="cart-table">
+
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Subtotal</th>
+<th>Remove</th>
+</tr>
+
+{% for product in products %}
+
+<tr>
+
+<td>
+<img src="{{ product.image.url }}" width="60">
+{{ product.name }}
+</td>
+
+<td>₹{{ product.price }}</td>
+
+<td>{{ product.quantity }}</td>
+
+<td>₹{{ product.subtotal }}</td>
+
+<td>
+<a href="{% url 'remove_from_cart' product.id %}">Remove</a>
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+<h3>Total: ₹{{ total }}</h3>
+
+{% else %}
+
+<p>Cart is empty</p>
+
+{% endif %}
+
+{% endblock %}
