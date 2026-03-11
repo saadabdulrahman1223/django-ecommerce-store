@@ -37,3 +37,17 @@ python manage.py runserver
 4. Open in browser
 
 http://127.0.0.1:8000/products/
+
+## Project_images
+
+### Homepage
+![Homepage](screenshots/homepage1.png)
+
+### Products Page
+![Products](screenshots/homepage2.png)
+
+### Cart
+![Cart](screenshots/cart.png)
+
+### Search
+![Search](screenshots/search.png)
