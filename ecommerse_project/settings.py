@@ -125,5 +125,9 @@ STATICFILES_DIRS = [
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+import os
+
+# Media files (user-uploaded files like products)
+MEDIA_URL = '/media/'                # URL to access media files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # folder where media files are stored
