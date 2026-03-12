@@ -1,3 +1,4 @@
+import os
 """
 Django settings for ecommerse_project project.
 
@@ -126,8 +127,6 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
-import os
-
 # Media files (user-uploaded files like products)
-MEDIA_URL = '/media/'                # URL to access media files
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  # folder where media files are stored
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # folder where media files are stored
