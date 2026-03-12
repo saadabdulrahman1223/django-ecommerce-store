@@ -26,9 +26,6 @@ SECRET_KEY = 'django-insecure-0o3^#gb3vaj&-rrx2&)8&0e-a-a-va4hmp^mr#7@oe&0up1iu)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['django-ecommerce-store-urqw.onrender.com']
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -122,11 +119,13 @@ STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
 
-
+# Static files (CSS, JS)
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = BASE_DIR / "staticfiles"  # Path object works fine with / operator
 
+# Media files (uploaded images)
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / "media"
 
-# Media files (user-uploaded files like products)
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")  # folder where media files are stored
+# Hosts
+ALLOWED_HOSTS = ['django-ecommerce-store-urqw.onrender.com']  # replace with your Render URL
