@@ -128,4 +128,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / "media"
 
 # Hosts
-ALLOWED_HOSTS = ['django-ecommerce-store-urqw.onrender.com']  # replace with your Render URL
+ALLOWED_HOSTS = ['django-ecommerce-store-urqw.onrender.com', 'localhost', '127.0.0.1']  # replace with your Render URL
